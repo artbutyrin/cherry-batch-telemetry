@@ -1,0 +1,17 @@
+.text-block {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+.text-block [data-scramble] {
+  margin: 0;
+}
+
+.char {
+  will-change: transform;
+  display: inline-block;
+}

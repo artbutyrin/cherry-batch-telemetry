@@ -1,0 +1,253 @@
+.asm-page {
+  padding: var(--sp-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+  max-width: 960px;
+}
+
+.asm-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.asm-head h1 {
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  margin: 0.25rem 0 0.5rem;
+}
+
+.asm-lede {
+  margin: 0;
+  color: var(--text-dimmed);
+  max-width: 48ch;
+  font-size: 0.95rem;
+}
+
+.asm-stations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.asm-station-card {
+  text-align: left;
+  background: var(--dark-8);
+  border: 1px solid var(--border);
+  color: inherit;
+  padding: 1.25rem 1.1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.asm-station-card:hover {
+  border-color: var(--accent);
+  background: rgba(255, 51, 88, 0.06);
+}
+
+.asm-station-city {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.asm-station-desk {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.asm-station-note {
+  font-size: 0.75rem;
+  color: var(--text-dimmed);
+  font-family: var(--font-ui);
+}
+
+.asm-bench-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.asm-bench select {
+  background: var(--dark-8);
+  border: 1px solid var(--border);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+  border-radius: 0;
+}
+
+.asm-section-label {
+  margin: 1.25rem 0 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dimmed);
+}
+
+.asm-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.asm-part {
+  border: 1px solid var(--border);
+  background: var(--dark-8);
+  color: var(--text-dimmed);
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.asm-part.is-on {
+  border-color: var(--accent);
+  color: #fff;
+  background: rgba(255, 51, 88, 0.12);
+}
+
+.asm-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.asm-flash {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.asm-log-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.asm-log-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.asm-log-list li:last-child {
+  border-bottom: none;
+}
+
+.asm-log-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.asm-log-list p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.asm-log-note {
+  color: var(--text-dimmed) !important;
+  font-size: 0.85rem !important;
+  margin-top: 0.25rem !important;
+}
+
+.asm-log-ts {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--text-dimmed);
+}
+
+.asm-empty {
+  color: var(--text-dimmed);
+  margin: 0.75rem 0 0;
+}
+
+.logi-page {
+  max-width: 1100px;
+}
+
+.logi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.logi-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.logi-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.logi-serial {
+  margin: 0.25rem 0 0;
+  color: #ff8da1;
+  font-size: 0.8rem;
+}
+
+.logi-route {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.logi-route li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 0.65rem;
+  padding: 0.45rem 0 0.85rem;
+}
+
+.logi-route li.is-current strong {
+  color: var(--accent);
+}
+
+.logi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.logi-route p {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-dimmed);
+}
+
+.logi-arrow {
+  position: absolute;
+  left: 1px;
+  bottom: 0;
+  font-size: 0.7rem;
+  color: var(--dark-3);
+}
+
+@media (max-width: 900px) {
+  .asm-page {
+    padding: var(--sp-md);
+  }
+
+  .asm-stations,
+  .logi-grid,
+  .asm-bench-grid {
+    grid-template-columns: 1fr;
+  }
+}

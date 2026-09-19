@@ -1,0 +1,49 @@
+/* Brand tokens from GenCherry brandbook (papka_color reference — not imported at build time) */
+:root {
+  --cherry-0: #ffe3e9;
+  --cherry-1: #ffb8c5;
+  --cherry-2: #ff8da1;
+  --cherry-3: #ff5c79;
+  --cherry-4: #ff3358;
+  --cherry-5: #ff1443;
+  --cherry-6: #fb0029;
+  --cherry-7: #d80030;
+  --cherry-8: #a30024;
+  --cherry-9: #6e0018;
+
+  --dark-0: #c9c9c9;
+  --dark-1: #b8b8b8;
+  --dark-2: #828282;
+  --dark-3: #696969;
+  --dark-4: #424242;
+  --dark-5: #3b3b3b;
+  --dark-6: #2e2e2e;
+  --dark-7: #242424;
+  --dark-8: #1f1f1f;
+  --dark-9: #141414;
+  --white: #ffffff;
+  --black: #000000;
+
+  --body-bg: var(--dark-7);
+  --surface: var(--dark-6);
+  --surface-raised: var(--dark-5);
+  --border: var(--dark-4);
+  --text: var(--dark-0);
+  --text-dimmed: var(--dark-2);
+  --accent: var(--cherry-4);
+  --accent-hover: var(--cherry-5);
+
+  --font-ui: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --radius: 0;
+  --header-h: 56px;
+  --sidebar-w: 240px;
+
+  --sp-xs: 0.625rem;
+  --sp-sm: 0.75rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.25rem;
+  --sp-xl: 2rem;
+}

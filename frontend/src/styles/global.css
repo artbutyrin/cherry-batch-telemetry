@@ -1,0 +1,216 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global thin cherry scrollbar for any overflow pane */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 51, 88, 0.5) rgba(255, 255, 255, 0.05);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff5c79, #a30024);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff8da1, #ff3358);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+}
+
+.mono {
+  font-family: var(--font-ui);
+  letter-spacing: 0.02em;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-dimmed);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+a.btn-primary:hover {
+  background: var(--accent-hover);
+  color: var(--black);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-dimmed);
+}
+
+.field input {
+  background: var(--dark-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+}
+
+.field select {
+  background: var(--dark-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 1px solid var(--accent);
+  border-color: var(--accent);
+}
+
+.banner-demo {
+  border: 1px solid var(--border);
+  background: var(--dark-8);
+  padding: 0.65rem 0.9rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-dimmed);
+}
+
+.banner-demo strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: var(--sp-lg);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  color: var(--text-dimmed);
+}
+
+.pill-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pill-warn {
+  border-color: #b57600;
+  color: #f0c674;
+}
+
+.pill-danger {
+  border-color: var(--cherry-7);
+  color: var(--cherry-3);
+}
