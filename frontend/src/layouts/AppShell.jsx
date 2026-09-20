@@ -59,8 +59,6 @@ export default function AppShell() {
           </div>
         </div>
         <div className="shell-user">
-          <span className="pill pill-accent">{user?.roleLabel}</span>
-          <span className="shell-name">{user?.name}</span>
           <button type="button" className="btn btn-ghost" onClick={handleLogout}>
             Вийти
           </button>
@@ -99,11 +97,20 @@ export default function AppShell() {
               </NavLink>
             ))}
           </nav>
-          <p className="shell-sidebar-note">
-            {user?.roleId === "assembler"
-              ? "Пункти Житомир / Одеса / Київ — демо-відділення."
-              : "Точки на карті — демо-зони, не реальні адреси виробництв."}
-          </p>
+          <div className="shell-sidebar-foot">
+            <div className="shell-sidebar-user">
+              <span className="shell-name">
+                {user?.name && user.name !== user.roleLabel
+                  ? `${user.roleLabel} · ${user.name}`
+                  : user?.roleLabel}
+              </span>
+            </div>
+            <p className="shell-sidebar-note">
+              {user?.roleId === "assembler"
+                ? "Пункти Житомир / Одеса / Київ — демо-відділення."
+                : "Точки на карті — демо-зони, не реальні адреси виробництв."}
+            </p>
+          </div>
         </aside>
 
         <main className={`shell-main${bleed ? " is-bleed" : ""}`}>
